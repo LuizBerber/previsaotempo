@@ -1,0 +1,1 @@
+insert into previsao_tempo (codigo, dia_semana, temperatura_minima, temperatura_maxima, humidade, descricao) values (1, 'Segunda', 15.0, 21.0, 70.0, 'Faz frio');
