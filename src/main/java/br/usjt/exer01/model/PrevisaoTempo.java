@@ -19,6 +19,9 @@ public class PrevisaoTempo implements Serializable{
 	private double temperatura_maxima;
 	private double humidade;
 	private String descricao;
+	private String latitude;
+	private String longitude;
+	private String data_hora;
 	
 	public long getCodigo() {
 		return codigo;
@@ -59,6 +62,25 @@ public class PrevisaoTempo implements Serializable{
 	public void setTemperatura_maxima(double temperatura_maxima) {
 		this.temperatura_maxima = temperatura_maxima;
 	}
+	public String getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+	public String getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+	public String getData_hora() {
+		return data_hora;
+	}
+	public void setData_hora(String data_hora) {
+		this.data_hora = data_hora;
+	}
+
 
 
 }
