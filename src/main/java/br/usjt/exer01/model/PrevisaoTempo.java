@@ -15,8 +15,11 @@ public class PrevisaoTempo implements Serializable{
 	private long codigo;
 	
 	private String diaSemana;
-	private double temperaturaMinima;
-	private double temperaturaMaxima;
+	private double temperatura_minima;
+	private double temperatura_maxima;
+	private double humidade;
+	private String descricao;
+	
 	public long getCodigo() {
 		return codigo;
 	}
@@ -28,18 +31,6 @@ public class PrevisaoTempo implements Serializable{
 	}
 	public void setDiaSemana(String diaSemana) {
 		this.diaSemana = diaSemana;
-	}
-	public double getTemperaturaMinima() {
-		return temperaturaMinima;
-	}
-	public void setTemperaturaMinima(double temperaturaMinima) {
-		this.temperaturaMinima = temperaturaMinima;
-	}
-	public double getTemperaturaMaxima() {
-		return temperaturaMaxima;
-	}
-	public void setTemperaturaMaxima(double temperaturaMaxima) {
-		this.temperaturaMaxima = temperaturaMaxima;
 	}
 	public double getHumidade() {
 		return humidade;
@@ -56,8 +47,18 @@ public class PrevisaoTempo implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	private double humidade;
-	private String descricao;
+	public double getTemperatura_minima() {
+		return temperatura_minima;
+	}
+	public void setTemperatura_minima(double temperatura_minima) {
+		this.temperatura_minima = temperatura_minima;
+	}
+	public double getTemperatura_maxima() {
+		return temperatura_maxima;
+	}
+	public void setTemperatura_maxima(double temperatura_maxima) {
+		this.temperatura_maxima = temperatura_maxima;
+	}
 
 
 }
