@@ -2,10 +2,12 @@ package br.usjt.exer01.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -19,6 +21,10 @@ public class PrevisaoTempo implements Serializable {
 	@OneToOne
 	@JoinColumn (name = "diasemana")
 	private Dia diaSemana;
+	
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="cidade")
+	private Cidade cidade;
 
 	private double temperatura_minima;
 	private double temperatura_maxima;
@@ -128,5 +134,12 @@ public class PrevisaoTempo implements Serializable {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "PrevisaoTempo [diaSemana=" + diaSemana + "]";
+	}
+	
+	
 
 }
